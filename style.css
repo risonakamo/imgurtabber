@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+body
+{
+    margin: 0;
+}
+
+div
+{
+    display: inline-block;
+}
+
+.test
+{
+    background-color: red;
+    width: 100px;
+    height: 100px;
+}
+
+.click-test
+{
+    background-color: blue;
+    width: 100px;
+    height: 100px;
+}
+
+.output a
+{
+    display: block;
+}
