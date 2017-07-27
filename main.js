@@ -4,17 +4,17 @@ var _inputBox;
 var _output;
 function main()
 {
-    var testb=document.querySelector(".test");
+    var genLinkB=document.querySelector(".gen-link");
     _inputBox=document.querySelector(".input-box");
     _output=document.querySelector(".output");
 
-    testb.addEventListener("click",(e)=>{
+    genLinkB.addEventListener("click",(e)=>{
         parseInput();
     });
 
-    var testc=document.querySelector(".click-test");
+    var openAllB=document.querySelector(".open-all");
 
-    testc.addEventListener("click",(e)=>{
+    openAllB.addEventListener("click",(e)=>{
         var links=document.querySelectorAll(".output a");
 
         for (var x=0,l=links.length;x<l;x++)
@@ -35,6 +35,6 @@ function parseInput()
             return;
         }
 
-        _output.insertAdjacentHTML("beforeend",`<a href="${inputLinks[x]}" target="_blank" rel="noreferrer">link</a>`);
+        _output.insertAdjacentHTML("beforeend",`<a href="${inputLinks[x]}" target="_blank" rel="noreferrer">${inputLinks[x]}</a>`);
     }
 }
