@@ -27,6 +27,7 @@ function main()
 function parseInput()
 {
     var inputLinks=_inputBox.value.split("\n");
+    _output.innerHTML="";
 
     for (var x=0,l=inputLinks.length;x<l;x++)
     {
