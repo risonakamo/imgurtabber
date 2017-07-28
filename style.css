@@ -36,6 +36,7 @@ div
     color: white;
     resize: none;
     border: none;
+    white-space: nowrap;
 }
 
 .input-box:focus
