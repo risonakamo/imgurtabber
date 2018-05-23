@@ -1,0 +1,7 @@
+@media (min-aspect-ratio:9/7)
+{
+    .wrap .input-box,.output>a
+    {
+        font-size: 15px;
+    }
+}

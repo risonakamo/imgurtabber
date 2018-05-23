@@ -44,7 +44,7 @@ function parseInput()
 //big image links
 //give it the direct source of an image to generate source links, it doesnt
 //matter which page it is
-function pixivGen(url,count)
+function pixivgen(url,count)
 {
     var toppagereg=/\?mode=medium/;
     var srcreg=/img-original/;
