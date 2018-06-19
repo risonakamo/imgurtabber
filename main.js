@@ -32,6 +32,12 @@ function parseInput()
     var inputLinks=_inputBox.value.split("\n");
     _output.innerHTML="";
 
+    if (autoPixivGen(inputLinks))
+    {
+        parseInput();
+        return;
+    }
+
     for (var x=0,l=inputLinks.length;x<l;x++)
     {
         if (inputLinks[x].length<5)
@@ -91,4 +97,30 @@ function pixivgen(url,count=_lastPixivCount)
     }
 
     _inputBox.value=res;
+}
+
+//if input to input box is only one entry, check to see if it is valid pixiv
+//url and auto run pixivgen function
+function autoPixivGen(links)
+{
+    if (links.length!=1
+        || (links[0].slice(0,61)!="https://www.pixiv.net/member_illust.php?mode=medium&illust_id"
+        && links[0].slice(0,36)!="https://i.pximg.net/img-original/img"))
+    {
+        return false;
+    }
+
+    var pixivgenInputs=links[0].split(",");
+
+    if (pixivgenInputs.length>1)
+    {
+        pixivgen(pixivgenInputs[0],pixivgenInputs[1]);
+    }
+
+    else
+    {
+        pixivgen(pixivgenInputs[0]);
+    }
+
+    return true;
 }
