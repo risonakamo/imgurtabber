@@ -49,7 +49,7 @@ function parseInput()
 //matter which page it is
 function pixivgen(url,count=_lastPixivCount)
 {
-    if (url.length<=50)
+    if (!url || url.length<=50)
     {
         console.log(`usage:\npixivgen(url,count)\n\nsteps:\n1. navigate to the top pixiv page of a pixiv manga page\n2. give that link and the number of pages to the function as url,count\n3. generate the pages and open all the links so the images cache.\n4. take any of the newly open tabs and get a source image url by dragging the image on the page into a tab\n5. give the function that url. the count can be omitted, it will use the last entered count\n6. generate again and open.`);
         return;
