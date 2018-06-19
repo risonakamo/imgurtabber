@@ -61,6 +61,7 @@ function pixivgen(url,count=_lastPixivCount)
         return;
     }
 
+    _lastPixivCount=count;
     var toppagereg=/\?mode=medium/;
     var srcreg=/img-original/;
     var res="";
